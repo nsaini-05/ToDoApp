@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.main {
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.container {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.main-heading {
+  font-size: 4.4rem;
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  letter-spacing: -0.4px;
+}
+
+.cta-form {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.cta-form input,
+.cta-form select {
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  background-color: #ffff;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: inherit;
+  flex: 1;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn--form {
+  font-family: inherit;
+  align-self: end;
+  background-color: #4dabf7;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #4dabf7;
+  box-shadow: inset 0 0 0 1px #4dabf7;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.item {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.item span {
+  flex: 1;
+}
+
+.list-container {
+  padding: 4.8rem 0;
+}
+
+.delete-card {
+  background: none;
+  border: none;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #c92a2a;
+  border-radius: 50%;
+  padding: 1.2rem;
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  background-color: #faeaea;
+  cursor: pointer;
+}

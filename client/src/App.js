@@ -1,10 +1,16 @@
 import React from "react";
-
+import "./App.css";
+import Form from "./components/Form/Form";
+import ToDos from "./components/ToDos/ToDos";
 export const App = () => {
   return (
-    <div>
-      <h3>SAaini</h3>
-    </div>
+    <section className="main">
+      <div className="container">
+        <h1 className="main-heading">To Do App</h1>
+        <Form />
+        <ToDos />
+      </div>
+    </section>
   );
 };
 
