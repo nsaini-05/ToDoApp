@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const todoSchema = mongoose.Schema({
-  title: { type: String },
+  title: { type: String, required: true },
   createdAt: {
     type: Date,
     default: Date.now(),

@@ -7,15 +7,13 @@ export const ToDos = () => {
 
   return (
     <div className="list-container">
-      {todos.length !== 0 ? (
-        todos.map((todo) => (
-          <ul className="list">
-            <ToDoItem item={todo} key={todo._id} />
-          </ul>
-        ))
-      ) : (
-        <></>
-      )}
+      <ul className="list">
+        {todos.length !== 0 ? (
+          todos.map((todo) => <ToDoItem item={todo} key={todo._id} />)
+        ) : (
+          <></>
+        )}
+      </ul>
     </div>
   );
 };

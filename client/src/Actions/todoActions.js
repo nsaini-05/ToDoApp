@@ -7,3 +7,12 @@ export const getToDos = () => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const createToDo = (todo) => async (dispatch) => {
+  try {
+    const { data } = await api.createToDo(todo);
+    dispatch({ type: "CREATE", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};

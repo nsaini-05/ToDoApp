@@ -4,6 +4,7 @@ export const todoReducers = (todoList = [], action) => {
       return action.payload;
 
     case "CREATE":
+      return [...todoList, action.payload];
 
     default:
       return todoList;
