@@ -29,6 +29,20 @@ export const deleteToDo = async (req, res) => {
   }
 
   const todoItem = ToDoModel.findById(id);
-  await todoItem.remove();
+  await todoItem.findOneAndDelete(id);
   res.json({ message: "Post deleted successfully" });
+};
+
+export const updateToDo = async (req, res) => {
+  const { id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ message: "No post with that ID" });
+  }
+
+  const todo = await ToDoModel.findByIdAndUpdate(id, req.body, {
+    new: true,
+    runValidators: true,
+    useFindAndModify: false,
+  });
+  res.json(todo);
 };

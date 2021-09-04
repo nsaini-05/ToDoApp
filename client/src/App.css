@@ -89,7 +89,7 @@ body {
   gap: 2.4rem;
 }
 
-.item span {
+.item .title {
   flex: 1;
 }
 
