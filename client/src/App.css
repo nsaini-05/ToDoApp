@@ -39,7 +39,7 @@ body {
 .cta-form input,
 .cta-form select {
   padding: 0.8rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: inherit;
   background-color: #ffff;
   border: 1px solid lightgrey;
@@ -78,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .item {

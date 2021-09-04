@@ -16,3 +16,12 @@ export const createToDo = (todo) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const deleteToDo = (id) => async (dispatch) => {
+  try {
+    await api.deleteToDo(id);
+    dispatch({ type: "DELETE", payload: id });
+  } catch (error) {
+    console.log(error);
+  }
+};

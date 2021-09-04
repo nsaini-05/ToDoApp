@@ -6,6 +6,9 @@ export const todoReducers = (todoList = [], action) => {
     case "CREATE":
       return [...todoList, action.payload];
 
+    case "DELETE":
+      return todoList.filter((todo) => todo._id !== action.payload);
+
     default:
       return todoList;
   }
