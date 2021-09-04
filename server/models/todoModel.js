@@ -7,5 +7,5 @@ const todoSchema = mongoose.Schema({
   },
 });
 
-const ToDoModel = mongoose.model("ToDoModel", todoSchema);
+const ToDoModel = mongoose.model("ToDo", todoSchema);
 export default ToDoModel;

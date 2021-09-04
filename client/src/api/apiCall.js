@@ -1,4 +1,4 @@
 import axios from "axios";
-const url = "localhost:5000/todos";
+const url = "http://localhost:5000/todos";
 
-const fetchToDoList = () => axios.get(url);
+export const fetchToDos = () => axios.get(url);

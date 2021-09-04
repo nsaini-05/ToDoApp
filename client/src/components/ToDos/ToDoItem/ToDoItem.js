@@ -1,10 +1,10 @@
 import React from "react";
 
-export const ToDoItem = () => {
+export const ToDoItem = (props) => {
   return (
-    <li class="item">
+    <li className="item">
       <input type="checkbox" id="" name="" value="" />
-      <span> I am to do </span>
+      <span> {props.item.title} </span>
       <button className="delete-card">
         <ion-icon name="trash-outline" class="icon  "></ion-icon>
       </button>
