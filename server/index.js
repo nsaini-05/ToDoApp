@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import { dbConnection } from "../server/database.js";
+import { dbConnection } from "./database.js";
 import todoRoutes from "./routes/todoRoutes.js";
 import dotenv from "dotenv";
 dotenv.config();
@@ -23,3 +23,7 @@ connectionResult
   });
 
 app.use("/todos", todoRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Hello to ToDO API");
+});
