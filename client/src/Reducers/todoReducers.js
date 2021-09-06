@@ -7,13 +7,11 @@ export const todoReducers = (todoList = [], action) => {
       return [...todoList, action.payload];
 
     case "DELETE":
-      return todoList.filter((todo) =>
-        todo._id === action.payload ? action.payload : todo
-      );
+      return todoList.filter((todo) => todo._id !== action.payload);
 
     case "UPDATE":
       return todoList.map((todo) =>
-        todo._id !== action.payload._id ? todo : todo
+        todo._id === action.payload._id ? action.payload : todo
       );
 
     default:

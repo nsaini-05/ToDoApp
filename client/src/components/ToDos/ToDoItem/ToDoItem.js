@@ -4,26 +4,37 @@ import { deleteToDo, updateToDo } from "../../../Actions/todoActions";
 import ContentEditable from "react-contenteditable";
 
 export const ToDoItem = (props) => {
-  const [todo, setToDo] = useState(props.item.title);
+  const [todo, setToDo] = useState(props.item);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    setToDo(e.target.value);
-    const todo = { title: e.target.value };
+    todo.title = e.target.value;
+    dispatch(updateToDo(props.item._id, todo));
+  };
 
+  const handleStateChange = () => {
+    todo.status = !todo.status;
     dispatch(updateToDo(props.item._id, todo));
   };
 
   return (
     <li className="item">
-      <input type="checkbox" id="" name="" value="" />
+      <input
+        type="checkbox"
+        id=""
+        name=""
+        value=""
+        onClick={handleStateChange}
+        checked={todo.status}
+      />
 
       <ContentEditable
-        html={todo} // innerHTML of the editable div
+        html={todo.title} // innerHTML of the editable div
         disabled={false} // use true to disable edition
         onChange={handleChange}
-        className="title"
+        className={todo.status ? " title strike " : "title"}
       />
+
       <button
         className="delete-card"
         onClick={() => dispatch(deleteToDo(props.item._id))}

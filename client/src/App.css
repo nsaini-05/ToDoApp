@@ -93,6 +93,12 @@ body {
   flex: 1;
 }
 
+.strike {
+  text-decoration: line-through;
+  text-decoration-color: #4dabf7;
+  text-decoration-thickness: 2px;
+}
+
 .list-container {
   padding: 4.8rem 0;
 }

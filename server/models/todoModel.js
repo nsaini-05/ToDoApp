@@ -5,7 +5,7 @@ const todoSchema = mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
-  status: { type: String, default: "unfinished" },
+  status: { type: Boolean, default: false },
 });
 
 const ToDoModel = mongoose.model("ToDo", todoSchema);

@@ -29,7 +29,7 @@ export const deleteToDo = async (req, res) => {
   }
 
   const todoItem = ToDoModel.findById(id);
-  await todoItem.findOneAndDelete(id);
+  await todoItem.findOneAndRemove();
   res.json({ message: "Post deleted successfully" });
 };
 
