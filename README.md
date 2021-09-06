@@ -13,5 +13,6 @@ You can try the demo app at [ToDoApp](https://todoapp04.netlify.app/)
   <img  src="https://github.com/nsaini-05/ToDoApp/blob/main/Demo.gif">
 </p>
 
-
+## Author
+[Neeraj Saini](https://github.com/nsaini-05)
 
